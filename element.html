@@ -1,0 +1,159 @@
+<html>
+  <head>
+    <title>Embedded Content</title>
+  </head>
+  <body>
+    <h1>Html=object></h1>
+    <div class="frame">
+      <object data="https://foundcolor.co/" type="text/html"></object>
+    </div>
+  <div class="window">
+  <object data="https://018-blknws.tumblr.com/" type="text/html"></object>
+</div>
+<div class="tv">
+  <object data="http://www.wrasse.pw/joel/icons/" type="text/html"></object>
+  <div class="knob"></div>
+</div>
+<div class="left-edge chaos">
+  <object data="content/hhd.mp4" type="video/mp4"></object>
+</div>
+<div class="ghost">
+  <object data="content/hhd.mp4" type="video/mp4"></object>
+</div>
+<div class="swap">
+  <object id="obj" data="content/hhd.mp4" type="video/mp4"></object>
+</div>
+
+<script>
+setTimeout(()=>{
+  document.getElementById("obj").data="content/other-video.mp4";
+},2000);
+</script>
+
+<style>
+.swap{
+  width:320px;
+  height:220px;
+  border:3px dashed rgb(116, 67, 111);
+}
+
+.swap object{
+  width:100%;
+  height:100%;
+}
+</style>
+
+<style>
+.ghost{
+  width:300px;
+  height:200px;
+  border:none;
+}
+
+.ghost object{
+  width:100%;
+  height:100%;
+  opacity:0.05;
+}
+</style>
+
+<style>
+.chaos{
+  width:120px;
+  height:120px;
+  border:3px solid black;
+  overflow:hidden;
+}
+
+.chaos object{
+  width:100%;
+  height:100%;
+  transition:all .5s ease;
+}
+
+.chaos:hover object{
+  width:600px;
+  height:400px;
+}
+
+.tv{
+  width:320px;
+  height:240px;
+  background:#c44343;
+  border-radius:800px;
+  padding:20px;
+  position:relative;
+  box-shadow:0 10px 25px rgba(0,0,0,0.6);
+}
+
+.tv object{
+  width:100%;
+  height:100%;
+  border:none;
+  border-radius:300px;
+  background:black;
+}
+
+.knob{
+  width:20px;
+  height:20px;
+  border-radius:50%;
+  background:#888;
+  position:absolute;
+  bottom:15px;
+  right:15px;
+}
+
+.window{
+  width:320px;
+  height:220px;
+  border:8px solid #cfd8dc;
+  background:#e0f7fa;
+  box-shadow:inset 0 0 10px rgba(0,0,0,0.2);
+  position:relative;
+}
+
+.window::before,
+.window::after{
+  content:"";
+  position:absolute;
+  background:#cfd8dc;
+}
+
+.window::before{
+  width:100%;
+  height:6px;
+  top:50%;
+  left:0;
+}
+
+.window::after{
+  width:6px;
+  height:100%;
+  left:50%;
+  top:0;
+}
+
+.window object{
+  width:100%;
+  height:100%;
+  border:none;
+}
+
+.frame{
+  width: 700px;
+  height:600px;
+  padding:15px;
+
+}
+
+
+
+.frame object{
+  width:100%;
+  height:100%;
+  border:none;
+}
+</style>
+</body>
+</html>
